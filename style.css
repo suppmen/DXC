@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+  font-family: "GT Walsheim Pro Regular", sans-serif;
+}
+body {
+  padding: 0;
+  margin: 0;
+  /* background-color: lightgray; */
+}
+
+.logo {
+  margin-left: 8%;
+  margin-top: 25px;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: flex-start;
+  justify-items: flex-start;
+  z-index: 10;
+}
+form > * + * {
+  margin-top: 1.5rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 5px;
+}
+label {
+  font-weight: 400;
+  line-height: 1;
+  align-self: center;
+}
+input {
+  -webkit-appearance: none;
+  appearance: none;
+  align-self: flex-end;
+}
+input[type="text"],
+input[type="number"],
+textarea {
+  color: #212121;
+  /* border: 1px solid #21212133; */
+  border: none;
+  /* background: rgb(243, 242, 242); */
+  padding: 8px 12px 6px;
+  /* border-radius: 4px; */
+  outline: none;
+  width: 250px;
+  background-color: lightgray;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border: gray 2px solid;
+  background: white;
+}
+
+.text h1 {
+  margin-top: 0px;
+
+  color: #6f2c91;
+  font-weight: bolder;
+  font-size: 5vw;
+  margin: 0;
+}
+
+.text {
+  width: 45%;
+  margin-left: 5%;
+  z-index: 10;
+}
+main {
+  display: flex;
+  width: 100%;
+  flex-flow: wrap;
+}
+main .form {
+  margin-left: 11%;
+  z-index: 10;
+}
+
+#triangle-up {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 450px;
+  height: 350px;
+  z-index: 1;
+  filter: opacity(0.7);
+
+  clip-path: polygon(50% 0, 0 100%, 100% 100%);
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./media/tree.jpg");
+}
+.btn {
+  font-family: "GT Walsheim Pro Regular", sans-serif;
+  background: #6f2c91;
+  border: 1px solid #6f2c91;
+  border-radius: 3px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 15px;
+  width: 180px;
+  padding: 10px 20px 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+:root {
+  --dur: 0.2s;
+  --timing: cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.checkmark {
+  --s: 2em;
+  width: var(--s);
+  height: var(--s);
+  cursor: pointer;
+  position: relative;
+}
+
+/*.checkmark:focus-within {
+  outline: 2px dashed rebeccapurple;
+  outline-offset: 5px;
+}*/
+
+#check {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  top: -3px;
+  left: -4px;
+  opacity: 0;
+  z-index: 1;
+  width: var(--s);
+  height: var(--s);
+  cursor: pointer;
+}
+
+svg {
+  --i: var(--checked, 0);
+  --noti: (1 - var(--i));
+  display: block;
+  background: white;
+  border-radius: 0.5em;
+  border: 1px solid #21212133;
+  background: rgb(243, 242, 242);
+  /* transition: blue var(--dur) calc(var(--dur) * 0.5 * var(--i)) var(--timing); */
+  pointer-events: none;
+  /* will-change: blue; */
+}
+
+path {
+  stroke-dasharray: 1 1;
+  stroke-dashoffset: calc(var(--noti) * 1);
+  fill: none;
+  stroke: #6f2c91;
+  stroke-width: 15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke-dashoffset var(--dur) var(--timing);
+  will-change: stroke-dashoffset;
+}
+
+input:checked ~ svg {
+  --checked: 1;
+}
+.checklabel {
+  float: left;
+}
+.checkgroup {
+  display: flex;
+  flex-direction: row;
+  /* margin-left: 30px; */
+  /* width: 90%; */
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 800px) {
+  .text {
+    width: 80%;
+    margin-left: 10%;
+    z-index: 10;
+    margin: 50px 12%;
+  }
+  main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  main > .text > h1 {
+    font-size: 10vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  main > .text > h1 {
+    font-size: 14vw;
+  }
+  .text {
+    width: 100%;
+    z-index: 10;
+  }
+  .form {
+    align-self: flex-start;
+    /* margin-left: 15%; */
+  }
+  form {
+    margin-left: 8%;
+    align-self: flex-start;
+  }
+}
