@@ -1,0 +1,528 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  background: url(./picture-assets/Image_012.png);
+  background-repeat: no-repeat;
+  width: 80%;
+  min-height: 5%;
+}
+
+section {
+  padding: 100px;
+  border: 1px solid red;
+  display: grid;
+}
+
+/*********************** first Section ********************/
+.banner-one {
+  position: relative;
+  min-height: 100vh;
+  background: url(./picture-assets/Image_001_002.png);
+  background-size: cover;
+  background-position: left;
+}
+.banner-one .textBox h1 {
+  position: absolute;
+  font-size: 2.6em;
+  color: #111;
+  font-weight: 700;
+  line-height: 1em;
+  top: 10%;
+}
+
+.banner-one .textBox h2 {
+  position: absolute;
+  font-size: 1.6em;
+  color: #111;
+  font-weight: 700;
+  line-height: 1em;
+  top: 25%;
+}
+
+.banner-one .textBox h3 {
+  top: 90%;
+  left: 80%;
+  position: absolute;
+  font-size: 1.5em;
+  color: #111;
+  font-weight: 500;
+}
+
+/*********************** second Section ********************/
+.banner-two {
+  margin-top: 10px;
+  position: relative;
+  min-height: 100vh;
+  background: url(./picture-assets/Image_002.png);
+  background-size: cover;
+  background-position: left;
+}
+.banner-two .textBox h1 {
+  position: absolute;
+  font-size: 3em;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.5em;
+  top: 15%;
+  left: 50%;
+}
+
+.banner-two .textBox h2 {
+  position: absolute;
+  font-size: 1.2em;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1em;
+  top: 5%;
+}
+
+/*********************** third Section ********************/
+.banner-three {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  min-height: 100vh;
+}
+img.page-three {
+  position: absolute;
+  top: 0;
+}
+.banner-three .textBox h1 {
+  position: absolute;
+  font-size: 3em;
+  color: #111;
+  font-weight: 700;
+  line-height: 1.5em;
+  top: 5%;
+}
+
+.banner-three .textBox h2 {
+  position: absolute;
+  font-size: 2em;
+  color: #111;
+  font-weight: 500;
+  line-height: 0.5em;
+  top: 15%;
+}
+.banner-three .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  width: 100%;
+}
+
+.banner-three .content .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 41%;
+  margin: 20px;
+  font-size: 1.2em;
+}
+
+.banner-three .content2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  background-color: rgba(222, 222, 222, 0.7);
+  top: 45%;
+  left: 0%;
+  width: 100%;
+}
+
+.banner-three .content2 .textBox2 {
+  padding: 0px 20px;
+  color: #111;
+  max-width: 41%;
+  margin: 20px;
+  font-size: 1.2em;
+}
+.banner-three .content3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 65%;
+  left: 0%;
+  width: 100%;
+}
+
+.banner-three .content3 .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 41%;
+  margin: 20px;
+  font-size: 1.2em;
+}
+
+/*********************** fourth Section ********************/
+.banner-four {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  min-height: 190vh;
+}
+img.page-four {
+  position: absolute;
+  top: 8%;
+  width: 90%;
+  left: 0;
+  padding-left: 5%;
+}
+
+.banner-four .textBox h2 {
+  position: absolute;
+  font-size: 1.5em;
+  color: #111;
+  font-weight: 500;
+  line-height: 1em;
+  top: 0%;
+  left: 5%;
+}
+.banner-four .heading {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.5em;
+  position: absolute;
+  top: 45%;
+  text-align: left;
+  left: 40%;
+  color: #111;
+}
+
+.banner-four .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 63%;
+  left: 36%;
+}
+
+.banner-four .content .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 41%;
+  font-size: 1.2em;
+}
+.textBox2 p span {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+/*********************** fivth Section ********************/
+.banner-five {
+  margin-top: 10px;
+  position: relative;
+  min-height: 120vh;
+}
+.banner-five .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 2%;
+  left: 0%;
+}
+
+.banner-five .content .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 30%;
+  font-size: 1.2em;
+}
+
+img.page-five {
+  position: absolute;
+  top: 42%;
+  width: 50%;
+  left: 50%;
+  padding-left: 5%;
+}
+
+/*********************** sixth Section ********************/
+.banner-six {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  min-height: 245vh;
+}
+.banner-six .textBox h2 {
+  position: absolute;
+  font-size: 1.5em;
+  color: #111;
+  font-weight: 500;
+  line-height: 1em;
+  top: 2%;
+  left: 5%;
+}
+
+.banner-six .Centering {
+  position: absolute;
+  text-align: center;
+  top: 10%;
+  color: #111;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 2em;
+
+  line-height: 2em;
+}
+img.page-six {
+  z-index: -1;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  left: 0;
+}
+
+/*********************** seventh Section ********************/
+.banner-seven {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  min-height: 245vh;
+}
+img.page-seven {
+  position: absolute;
+  top: 0%;
+}
+.banner-seven .textBox h1 {
+  position: absolute;
+  text-align: center;
+  top: 3%;
+  color: #111;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 5.2em;
+  line-height: 2em;
+  left: 0%;
+}
+
+.banner-seven .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 10%;
+  left: 6%;
+  width: 80%;
+}
+
+.banner-seven .content .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 29%;
+  margin: 20px;
+  font-size: 1.2em;
+}
+img.page-seven2 {
+  z-index: -100;
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  left: 0;
+}
+
+/*********************** eighth Section ********************/
+.banner-eight {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  min-height: 190vh;
+}
+
+.banner-eight .textBox h2 {
+  position: absolute;
+  font-size: 1.5em;
+  color: #111;
+  font-weight: 500;
+  line-height: 1em;
+  top: 0%;
+  left: 5%;
+}
+.banner-eight .heading {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.5em;
+  position: absolute;
+  top: 5%;
+  text-align: left;
+  left: 40%;
+  color: #111;
+}
+
+.banner-eight .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 18%;
+  left: 33%;
+}
+
+.banner-eight .content .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 41%;
+  font-size: 1.2em;
+}
+
+img.page-eight {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  left: 0;
+}
+
+/*********************** ninth Section ********************/
+.banner-nine {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  min-height: 250vh;
+}
+img.page-nine {
+  position: absolute;
+  top: 0%;
+  width: 50%;
+  right: 0;
+  padding-left: 5%;
+}
+
+.banner-nine .heading {
+  font-size: 3em;
+  font-weight: 700;
+  line-height: 1.5em;
+  position: absolute;
+  top: 5%;
+  text-align: left;
+  left: 5%;
+  color: #111;
+}
+
+.banner-nine .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 23%;
+  left: 4%;
+}
+
+.banner-nine .content .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 30%;
+  font-size: 1.2em;
+}
+
+img.page-nine2 {
+  position: absolute;
+  top: 55%;
+  width: 100%;
+  left: 0;
+}
+
+/*********************** tenth Section ********************/
+.banner-ten {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+  position: relative;
+  min-height: 190vh;
+}
+img.page-ten {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  padding-left: 5%;
+}
+
+.banner-ten .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 10%;
+  left: 36%;
+}
+
+.banner-ten .content .textBox2 {
+  padding: 40px 20px;
+  color: #111;
+  max-width: 40%;
+  font-size: 1.2em;
+}
+
+img.page-ten2 {
+  position: absolute;
+  top: 60%;
+  left: 36%;
+  width: 3%;
+}
+
+.banner-ten .textBox2.new {
+  position: absolute;
+  top: 59%;
+  left: 40%;
+  font-size: 1.5em;
+}
+
+.banner-ten .content2 {
+  display: flex;
+
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: absolute;
+  top: 70%;
+  left: 0%;
+}
+
+.banner-ten .content2 .textBox2 {
+  padding: 40px 80px;
+  color: #111;
+  max-width: 60%;
+  font-size: 1.2em;
+}
