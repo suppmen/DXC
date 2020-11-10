@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* FONTS */
+
+h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6rem;
+}
+
+h6 {
+  font-size: 0.85rem;
+  font-weight: 100;
+  color: gray;
+}
+a {
+  text-decoration: none;
+  color: gray;
+}
+/* COLORS */
+
+body {
+  font-family: GT Walsheim Pro, sans-serif;
+}
+
+/* HEADER */
+header {
+  width: 100vw;
+}
+header img {
+  width: 100%;
+  display: block;
+}
+.phone {
+  display: none;
+}
+.banner {
+  background-color: lightgrey;
+  padding: 4rem;
+  text-align: center;
+}
+
+.banner div {
+  margin: 0 auto;
+  width: 60vw;
+}
+
+/* Article */
+article {
+  margin: 0 auto;
+  padding: 3rem 5%;
+}
+.article {
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  grid-gap: 2rem;
+}
+.left {
+  grid-template-columns: 6fr 4fr;
+}
+.gray {
+  background-color: lightgrey;
+}
+.video {
+  text-align: center;
+  max-width: 1000px;
+}
+.black {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 7.5rem;
+  color: white;
+}
+footer {
+  background-color: black;
+}
+article div {
+  margin: auto 0;
+}
+
+article img {
+  justify-self: center;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+button {
+  background-color: rgb(112, 2, 134);
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  padding: 1.5rem;
+  margin-top: 0.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: GT Walsheim Pro, sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.white {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2.3rem;
+}
+
+#end {
+  justify-self: end;
+}
+
+@media screen and (max-width: 800px) {
+  header img {
+    display: none;
+  }
+  .phone {
+    display: block;
+  }
+}
+@media screen and (max-width: 900px) {
+  article {
+    padding: 3rem 7.5%;
+  }
+  .article {
+    grid-template-columns: 1fr;
+  }
+  button {
+    width: 25rem;
+  }
+  article img {
+    grid-row: 1;
+  }
+}
