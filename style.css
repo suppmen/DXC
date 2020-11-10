@@ -40,9 +40,16 @@ input {
   appearance: none;
   align-self: flex-end;
 }
-input[type="text"],
-input[type="number"],
-textarea {
+.valid {
+  border: greenyellow 1px solid;
+}
+.invalid {
+  border: red 1px solid;
+}
+#email:blur::before {
+  border: none;
+}
+input {
   color: #212121;
   /* border: 1px solid #21212133; */
   border: none;
@@ -54,10 +61,8 @@ textarea {
   background-color: lightgray;
 }
 
-input[type="text"]:focus,
-input[type="number"]:focus,
-textarea:focus {
-  border: gray 2px solid;
+input:focus {
+  /* border: gray 2px solid; */
   background: white;
 }
 
@@ -74,6 +79,9 @@ textarea:focus {
   width: 45%;
   margin-left: 5%;
   z-index: 10;
+}
+.text p {
+  width: 60%;
 }
 main {
   display: flex;
@@ -153,7 +161,7 @@ svg {
   --noti: (1 - var(--i));
   display: block;
   background: white;
-  border-radius: 0.5em;
+  /* border-radius: 0.5em; */
   border: 1px solid #21212133;
   background: rgb(243, 242, 242);
   /* transition: blue var(--dur) calc(var(--dur) * 0.5 * var(--i)) var(--timing); */
@@ -187,6 +195,7 @@ input:checked ~ svg {
 }
 
 /* On screens that are 600px or less, set the background color to olive */
+
 @media screen and (max-width: 800px) {
   .text {
     width: 80%;
