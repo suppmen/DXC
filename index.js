@@ -85,3 +85,33 @@ form.addEventListener("submit", (e) => {
     company: form.elements.company.value,
   };
 });
+
+// Changing content
+const logo = document.querySelector(".logo");
+const nextBtn = document.querySelector(".next");
+const backBtn = document.querySelector(".back");
+
+const textSection = document.querySelector(".text");
+const formSection = document.querySelector(".form");
+
+nextBtn.addEventListener("click", () => {
+  textSection.classList.add("fadeout");
+  // setTimeout(() => {
+  textSection.classList.add("hidden");
+  logo.classList.add("hidden");
+  formSection.classList.remove("hidden");
+  formSection.classList.add("fadein");
+  // }, 300);
+});
+
+backBtn.addEventListener("click", () => {
+  textSection.classList.remove("fadeout");
+  formSection.classList.add("fadeout");
+
+  // setTimeout(() => {
+  formSection.classList.add("hidden");
+  logo.classList.remove("hidden");
+  textSection.classList.remove("hidden");
+  textSection.classList.add("fadein");
+  // }, 300);
+});

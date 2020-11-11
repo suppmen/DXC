@@ -6,12 +6,13 @@ body {
   background-color: rgb(243, 242, 242);
   padding: 0;
   margin: 0;
+  background-color: #d9d9d9;
   /* background-color: lightgray; */
 }
 
 .logo {
-  margin-left: 8%;
-  margin-top: 25px;
+  margin-left: 2%;
+  margin-top: 20px;
 }
 form {
   display: flex;
@@ -36,13 +37,23 @@ label {
   line-height: 1;
   align-self: center;
 }
-input {
+input,
+select {
   -webkit-appearance: none;
   appearance: none;
   align-self: flex-end;
 }
+.submit-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.back {
+  margin-right: 20px;
+}
+
 .valid {
-  border: greenyellow 1px solid;
+  border: green 1px solid;
 }
 .invalid {
   border: red 1px solid;
@@ -50,39 +61,62 @@ input {
 #email:blur::before {
   border: none;
 }
-input {
+input,
+select {
   color: #212121;
-  /* border: 1px solid #21212133; */
+  /* border: 2px solid #21212133; */
   border: none;
   /* background: rgb(243, 242, 242); */
   padding: 8px 12px 6px;
-  /* border-radius: 4px; */
   outline: none;
-  width: 250px;
-  background-color: lightgray;
+  width: 30vw;
+  background-color: rgb(243, 243, 243);
+  /* background-color: white; */
 }
-
-input:focus {
+/* label {
+  transition: 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  position: absolute;
+  color: #999;
+  padding: 7px 6px;
+} */
+/* input:focus {
   border: gray 2px solid;
   background: white;
-}
+} */
 
-.text h1 {
+/* input:focus + label {
+  top: 100%;
+  margin-top: -16px;
+} */
+
+/* .text h1 {
   margin-top: 0px;
-
   color: #6f2c91;
   font-weight: bolder;
-  font-size: 5vw;
   margin: 0;
+} */
+.solution-title {
+  font-size: 3vw;
+  text-transform: uppercase;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: #6f2c91;
 }
 
 .text {
-  width: 45%;
+  width: 43%;
   margin-left: 5%;
   z-index: 10;
 }
 .text p {
-  /* width: 60%; */
+  margin-top: 10px;
+  line-height: 1.2rem;
+  /* padding-left: 10px; */
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.text .second-paragraph {
+  width: 80%;
 }
 main {
   display: flex;
@@ -90,20 +124,21 @@ main {
   flex-flow: wrap;
 }
 main .form {
-  margin-left: 11%;
+  margin-left: 7%;
   z-index: 10;
+  width: 100%;
 }
 
 #triangle-up {
   position: absolute;
   top: 0px;
   right: 0;
-  width: 80vw;
+  width: 60vw;
   height: 100vh;
   z-index: 1;
-  filter: opacity(0.4);
+  /* filter: opacbity(0.4); */
 
-  clip-path: polygon(70% 0, 100% 0%, 100% 100%, 0 100%);
+  clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0 100%);
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -226,9 +261,38 @@ input:checked ~ svg {
   .form {
     align-self: flex-start;
     /* margin-left: 15%; */
+    display: flex;
+    flex-direction: column;
   }
   form {
     margin-left: 8%;
     align-self: flex-start;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.fadeout {
+  animation: fadeout 0.3s ease-in;
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fadein {
+  animation: fadein 0.3s ease-in;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
