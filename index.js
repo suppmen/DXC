@@ -1,5 +1,7 @@
 import * as config from "./modules/config";
 import { get } from "./modules/rest";
+import Swal from "sweetalert2";
+
 let visitsCount = 1;
 
 // Post user information to the data list after ubmiting a form
@@ -85,7 +87,11 @@ form.addEventListener("submit", (e) => {
 
     post(myData);
   } else {
-    prompt("form is not valid");
+    Swal.fire({
+      icon: "error",
+      title: "Form is not valid",
+      text: "Check correction of the eamil input such as: name@domain.com",
+    });
   }
 });
 function changePage() {

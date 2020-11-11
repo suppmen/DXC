@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-section {
-  border: 1px solid red;
-}
-
 p span {
   font-size: 1.2em;
   font-weight: 600;

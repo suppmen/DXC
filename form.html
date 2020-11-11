@@ -24,21 +24,25 @@
           <h1 class="solution-title">Solution for Life</h1>
           <div class="form-group">
             <label for="fullname">Full Name</label>
-            <input placeholder="" type="text" id="fullname" />
+            <input placeholder="Only letters" type="text" id="fullname" />
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" required />
+            <input placeholder="name@domain" type="email" id="email" required />
           </div>
           <div class="form-group">
             <label for="company">Company</label>
-            <input type="text" id="company" />
+            <input
+              placeholder="The company you are working for"
+              type="text"
+              id="company"
+            />
           </div>
           <div class="form-group">
             <label for="country">Country</label>
             <select value="" id="country" name="country">
-              <option value="">--Please choose an option--</option>
+              <option value="">Please choose your resident country</option>
               <option value="Afganistan">Afghanistan</option>
               <option value="Albania">Albania</option>
               <option value="Algeria">Algeria</option>
@@ -301,7 +305,7 @@
           </div>
           <div class="form-group">
             <label for="job">Job Title</label>
-            <input type="text" id="job" />
+            <input placeholder="Your work position " type="text" id="job" />
           </div>
           <div class="form-group checkgroup">
             <label class="checkmark" for="check">
@@ -316,7 +320,7 @@
             </label>
           </div>
           <div class="submit-group">
-            <div class="btn back">Go Back</div>
+            <div class="small back">Go Back</div>
 
             <button id="submit" class="btn" type="submit">Download her</button>
           </div>
@@ -338,7 +342,7 @@
           tilsammen navigerer jeres virksomhed sikkert ind i jeres digitale
           fremtid.
         </p>
-        <button class="btn next">Neste</button>
+        <button class="small next">Neste</button>
       </article>
       <div id="triangle-up" class="asset-img"></div>
     </main>
