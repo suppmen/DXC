@@ -1,6 +1,15 @@
 * {
   box-sizing: border-box;
-  font-family: "GT Walsheim Pro Regular", sans-serif;
+  font-family: GT-Light;
+}
+/* FONTS */
+@font-face {
+  font-family: GT-Bold;
+  src: url(GT_Walsheim_Pro/Web/GT-Walsheim-Pro-Bold.woff);
+}
+@font-face {
+  font-family: GT-Light;
+  src: url(GT_Walsheim_Pro/Web/GT-Walsheim-Pro-Light.woff);
 }
 body {
   background-color: rgb(243, 242, 242);
@@ -101,6 +110,7 @@ select {
   margin-top: 20px;
   margin-bottom: 0;
   color: #6f2c91;
+  font-family: GT-Bold;
 }
 
 .text {
