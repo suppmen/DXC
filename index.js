@@ -47,7 +47,7 @@ function put(id) {
     .then((t) => get());
 }
 const emailField = document.querySelector("input[type=email]");
-emailField.addEventListener("input", (e) => {
+emailField.addEventListener("blur", (e) => {
   const emailIsValid = emailField.checkValidity();
 
   if (emailIsValid) {
@@ -59,12 +59,6 @@ emailField.addEventListener("input", (e) => {
 
     emailField.classList.add("invalid");
   }
-});
-emailField.addEventListener("blur", (e) => {
-  emailField.classList.remove("invalid");
-
-  emailField.classList.remove("valid");
-  emailField.style.border = "none";
 });
 
 const form = document.querySelector("form");
