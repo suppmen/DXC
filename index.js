@@ -1,9 +1,7 @@
 import * as config from "./modules/config";
 import { get } from "./modules/rest";
 import Swal from "sweetalert2";
-
-let visitsCount = 1;
-
+let visitsCount;
 // Post user information to the data list after ubmiting a form
 
 function post(data) {
@@ -26,22 +24,6 @@ function post(data) {
 
 // Update user entries to the form
 
-function put(id) {
-  let data = {
-    visits: visitsCount,
-  };
-  let postData = JSON.stringify(data);
-
-  fetch(`${config.endpoint}/${id}`, {
-    method: "put",
-    headers: {
-      "Content-Type": "application/json; charset=utf-8",
-      "x-apikey": config.key,
-      "cache-control": "no-cache",
-    },
-    body: postData,
-  }).then((d) => d.json());
-}
 const emailField = document.querySelector("input[type=email]");
 emailField.addEventListener("blur", (e) => {
   const emailIsValid = emailField.checkValidity();
@@ -114,7 +96,9 @@ nextBtn.addEventListener("click", () => {
   console.log(user);
   if (user) {
     console.log(user);
+    visitsCount = user.visits;
     visitsCount++;
+    console.log(visitsCount, "visits");
     let updatedPerson = {
       name: user.name,
       visits: visitsCount,
@@ -151,5 +135,25 @@ function handleData(data) {
   const filterdUers = data.filter((dataUser) => dataUser.email === user.email);
   console.log(filterdUers);
   put(filterdUers[0]._id);
-  window.location.href = "pdf.html";
+}
+
+function put(id) {
+  let data = {
+    visits: visitsCount,
+  };
+  let postData = JSON.stringify(data);
+
+  fetch(`${config.endpoint}/${id}`, {
+    method: "put",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": config.key,
+      "cache-control": "no-cache",
+    },
+    body: postData,
+  })
+    .then((d) => d.json())
+    .then((d) => {
+      window.location.href = "pdf.html";
+    });
 }
