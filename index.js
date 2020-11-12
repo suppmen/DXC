@@ -63,7 +63,6 @@ console.log(form);
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("in ubmit", form.elements);
-  form.elements.submit.disabled = true;
   console.log(form.elements.check.checked);
   if (!form.elements.check.checked) {
     const erorr = document.querySelector(".astrix");
@@ -72,6 +71,8 @@ form.addEventListener("submit", (e) => {
 
   const formIsValid = form.checkValidity();
   if (formIsValid) {
+    form.elements.submit.disabled = true;
+    window.location.href = "pdf.html";
     let person = {
       name: form.elements.fullname.value,
       visits: visitsCount,
@@ -89,7 +90,6 @@ form.addEventListener("submit", (e) => {
     };
 
     post(myData);
-    window.location.href = "pdf.html";
   } else {
     Swal.fire({
       icon: "error",

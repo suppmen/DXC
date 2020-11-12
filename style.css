@@ -200,6 +200,9 @@ main .form {
   width: 50px;
   cursor: pointer;
 }
+#check {
+  background-color: white;
+}
 .btn:hover {
   transform: scale(1.05);
 }
@@ -239,8 +242,6 @@ svg {
   --noti: (1 - var(--i));
   display: block;
   background: white;
-  border: 1px solid #21212133;
-  background: rgb(243, 242, 242);
   pointer-events: none;
 }
 
