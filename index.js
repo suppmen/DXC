@@ -64,7 +64,11 @@ form.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("in ubmit", form.elements);
   form.elements.submit.disabled = true;
-  console.log(form.elements.fullname.value);
+  console.log(form.elements.check.checked);
+  if (!form.elements.check.checked) {
+    const erorr = document.querySelector(".astrix");
+    erorr.style.display = "block";
+  }
 
   const formIsValid = form.checkValidity();
   if (formIsValid) {
@@ -76,7 +80,6 @@ form.addEventListener("submit", (e) => {
     let stringyPerson = JSON.stringify(person);
     // Setting up a new user with the username in the local storage after submitting the form
     localStorage.setItem("user", stringyPerson);
-    window.location.href = "pdf.html";
 
     const myData = {
       full_name: form.elements.fullname.value,
@@ -86,17 +89,15 @@ form.addEventListener("submit", (e) => {
     };
 
     post(myData);
+    window.location.href = "pdf.html";
   } else {
     Swal.fire({
       icon: "error",
       title: "Form is not valid",
-      text: "Check correction of the eamil input such as: name@domain.com",
     });
   }
 });
-function changePage() {
-  window.location.href = "pdf.html";
-}
+
 // Changing content
 const logo = document.querySelector(".logo");
 const nextBtn = document.querySelector(".next");

@@ -82,7 +82,7 @@ select {
 .solution-title {
   font-size: 3vw;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-bottom: 20px;
   color: #6f2c91;
   font-family: GT-Bold;
@@ -120,7 +120,7 @@ main .form {
   top: 0px;
   right: 0;
   width: 60vw;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   /* filter: opacbity(0.4); */
 
@@ -166,6 +166,7 @@ main .form {
   vertical-align: middle;
   transition: width 0.3s;
 }
+
 .small:hover::before {
   width: 50px;
   cursor: pointer;
@@ -209,12 +210,9 @@ svg {
   --noti: (1 - var(--i));
   display: block;
   background: white;
-  /* border-radius: 0.5em; */
   border: 1px solid #21212133;
   background: rgb(243, 242, 242);
-  /* transition: blue var(--dur) calc(var(--dur) * 0.5 * var(--i)) var(--timing); */
   pointer-events: none;
-  /* will-change: blue; */
 }
 
 path {
@@ -238,10 +236,12 @@ input:checked ~ svg {
 .checkgroup {
   display: flex;
   flex-direction: row;
-  /* margin-left: 30px; */
-  /* width: 90%; */
 }
 
+.astrix {
+  display: none;
+  color: red;
+}
 /* On screens that are 600px or less, set the background color to olive */
 
 @media screen and (max-width: 800px) {
@@ -257,14 +257,24 @@ input:checked ~ svg {
     flex-direction: column;
     justify-content: space-around;
   }
-  main > .text > h1 {
-    font-size: 10vw;
+  .solution-title {
+    font-size: 6vw;
+  }
+  #triangle-up {
+    display: none;
   }
 }
 
 @media screen and (max-width: 400px) {
-  main > .text > h1 {
-    font-size: 14vw;
+  .solution-title {
+    font-size: 10vw;
+  }
+  input,
+  select {
+    width: 250px;
+  }
+  #triangle-up {
+    display: none;
   }
   .text {
     width: 100%;
@@ -272,12 +282,10 @@ input:checked ~ svg {
   }
   .form {
     align-self: flex-start;
-    /* margin-left: 15%; */
     display: flex;
     flex-direction: column;
   }
   form {
-    margin-left: 8%;
     align-self: flex-start;
   }
 }
