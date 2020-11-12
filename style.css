@@ -12,10 +12,9 @@
   src: url(GT_Walsheim_Pro/Web/GT-Walsheim-Pro-Light.woff);
 }
 body {
-  background-color: rgb(243, 242, 242);
   padding: 0;
   margin: 0;
-  background-color: #d9d9d9;
+  background-color: #efefef;
 }
 
 .logo {
@@ -23,14 +22,10 @@ body {
   margin-top: 20px;
 }
 form {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  align-content: flex-start;
-  justify-items: flex-start;
-  z-index: 10;
+  grid-column: 2;
+  grid-row: 1;
+  height: 100%;
+  width: 100%;
 }
 form > * + * {
   margin-top: 1.5rem;
@@ -54,7 +49,31 @@ select {
 .submit-group {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+}
+#submit {
+  color: white;
+  background-color: #66338c;
+  border: solid 3px white;
+  /* width: 100px;
+  height: 50px; */
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem;
+  background-color: #66338c;
+  margin-top: -5px;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 600;
+  transition: 0.2s;
+  cursor: pointer;
+  font-family: GT-Bold;
+}
+#submit:hover {
+  /* transition: all 0.2s ease-in; */
+  background-color: white;
+  border: solid 3px #66338c;
+  color: #66338c;
+  padding: 1rem;
 }
 .back {
   margin-right: 20px;
@@ -76,13 +95,12 @@ select {
   padding: 8px 12px 6px;
   outline: none;
   width: 400px;
-  background-color: rgb(243, 243, 243);
+  background-color: white;
 }
 
 .solution-title {
   font-size: 3vw;
   text-transform: uppercase;
-  margin-top: 50px;
   margin-bottom: 20px;
   color: #6f2c91;
   font-family: GT-Bold;
@@ -96,7 +114,6 @@ select {
 .text p {
   margin-top: 10px;
   line-height: 1.2rem;
-  /* padding-left: 10px; */
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
@@ -105,24 +122,36 @@ select {
   margin-bottom: 40px;
 }
 main {
-  display: flex;
-  width: 100%;
-  flex-flow: wrap;
+  grid-column: 1 / 3;
+  padding: 2rem;
+  padding-right: 6rem;
+  align-self: center;
+  z-index: 1;
 }
 main .form {
   margin-left: 7%;
   z-index: 10;
+  position: relative;
   width: 100%;
 }
 
 #triangle-up {
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0;
-  width: 60vw;
   height: 100%;
   z-index: 1;
-  /* filter: opacbity(0.4); */
+  min-height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  grid-column: 1 / span -1;
+  grid-row: 1;
+  height: 100%;
+  width: 60%;
+  object-fit: cover;
+  filter: opacity(0.8);
 
   clip-path: polygon(50% 0, 100% 0%, 100% 100%, 0 100%);
 
@@ -251,12 +280,12 @@ input:checked ~ svg {
     z-index: 10;
     margin: 50px 12%;
   }
-  main {
+  /* main {
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: space-around;
-  }
+  } */
   .solution-title {
     font-size: 6vw;
   }
