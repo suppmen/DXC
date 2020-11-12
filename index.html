@@ -2,21 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="home.css" />
-    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <title>DXC-Home</title>
   </head>
   <body>
     <header>
       <div class="wrapper">
         <div class="content">
           <h6>DXC.technology</h6>
-          <h2>Our cloud approach</h2>
-          <h2>-- your IT foundation</h2>
+          <h1>Our cloud approach</h1>
+          <h1><i class="fas fa-play"></i> your IT foundation</h1>
           <h5>
             Kom den cloudbaserede fremtid sikkert i møde med os i cockpittet.
           </h5>
-          <a href="form.html"><button id="cta">Start her</button></a>
+          <a href="./form.html">
+          <button id="cta">Start her</button></a>
         </div>
         <figure>
           <img id="homeimg" src="assets/glasshouse.jpg" alt="" />
@@ -82,7 +85,7 @@
       </div>
     </article>
     <article class="four-col">
-      <div class="box1" id="b1">
+      <div class="box1">
         <img src="assets/forth photo.jpg" alt="" />
         <h4>Et gnidningsfrit skifte</h4>
         <p>
@@ -91,7 +94,7 @@
         </p>
         <button class="small">5 trin mod fremtiden</button>
       </div>
-      <div class="box1" id="b2">
+      <div class="box1">
         <img src="assets/fifth photo.jpg" alt="" />
         <h4>Rid cloud-bølgen til en fremtidssikret IT-infrastruktur</h4>
         <p>
@@ -100,7 +103,7 @@
         </p>
         <button class="small">Tag første skridt</button>
       </div>
-      <div class="box1" id="b3">
+      <div class="box1">
         <img src="assets/sixth photo.jpg" alt="" />
         <h4>Sådan letter vi din Dynamics 365-implementering</h4>
         <p>
@@ -109,7 +112,7 @@
         </p>
         <button class="small">Start nu</button>
       </div>
-      <div class="box1" id="b4">
+      <div class="box1">
         <img src="assets/seventh photo.jpg" alt="" />
         <h4>Succesfuld IT-implementering</h4>
         <p>
@@ -120,13 +123,47 @@
       </div>
     </article>
     <footer>
-      <div class="black">
-        <h4>
-          Kontakt os for at få mere at vide om hvordan vores cloud og business
-          approach kan skabe værdi for din virksomhed.
-        </h4>
+      <div class="ekspert">
+        <div class="text">
+          <h5>Vil du vide mere?</h5>
+          <h4>
+            Kontakt os for at få mere at vide om <br />
+            hvordan vores cloud og business approach <br />
+            kan skabe værdi for din virksomhed.
+          </h4>
+        </div>
+        <div class="btn"><button>tal med en ekspert</button></div>
+        <div class="site">
+          <a href="https://www.dxc.technology/"><img id="small-logo" src="assets/PNG/logo-blk.png" alt="" /></a>
+          <br> <h6>Visit us<a href="https://www.dxc.technology/"> here</a></h6>
+          <div class="social-links">
+            <a class="social-link" href="https://www.facebook.com/DXCTechnology" target="_blank" title="Follow DXC on Facebook">
+                <i class="fab fa-facebook" data-provider="Facebook"></i>
+            </a>
+            <a class="social-link" href="https://twitter.com/dxctechnology" target="_blank" title="Follow DXC on Twitter">
+                <i class="fab fa-twitter-square" data-provider="Twitter"></i>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/company/dxctechnology" target="_blank" title="Follow DXC on LinkedIn">
+                <i class="fab fa-linkedin" data-provider="LinkedIn"></i>
+            </a>
+            <a class="social-link" href="https://www.youtube.com/DXCTechnology" target="_blank" title="Follow DXC on YouTube">
+                <i class="fab fa-youtube-square" data-provider="YouTube"></i>
+            </a>
+            <a class="social-link" href="https://www.instagram.com/DxcTechnology/" target="_blank" title="Follow DXC on Instagram">
+                <i class="fab fa-instagram" data-provider="Instagram"></i>
+            </a>
+        </div>
+        </div>
+        <div class="contact">
+          <form class="form">
+            <h4>CONTACT US</h4>
+            <p type="Name:"><input placeholder="Write your name here.."></input></p>
+            <p type="Email:"><input placeholder="Let us know how to contact you back.."></input></p>
+            <p type="Message:"><input placeholder="What would you like to tell us.."></input></p>
+            <button class="small">Send Message</button>
+          </form>
+        </div>
       </div>
-      <div class="btn"><button>tal med en ekspert</button></div>
     </footer>
     <div class="white">
       <h6>© DXC Technology Company 2020</h6>
@@ -136,5 +173,7 @@
         <a href="https://staging.dxc.technology/site_map">Site Map</a>
       </h6>
     </div>
+
+    <script src="https://kea-alt-del.dk/dxc/login.js"></script>
   </body>
 </html>
