@@ -274,28 +274,24 @@ input:checked ~ svg {
 }
 /* On screens that are 600px or less, set the background color to olive */
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .text {
     width: 80%;
     margin-left: 10%;
     z-index: 10;
     margin: 50px 12%;
   }
-  /* main {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-around;
-  } */
+
   .solution-title {
     font-size: 6vw;
   }
   #triangle-up {
     display: none;
+    position: relative;
   }
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   .solution-title {
     font-size: 10vw;
   }

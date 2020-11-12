@@ -20,6 +20,7 @@ function post(data) {
     .then((res) => res.json())
     .then((data) => {
       form.elements.submit.disabled = false;
+      window.location.href = "pdf.html";
     });
 }
 
@@ -72,7 +73,6 @@ form.addEventListener("submit", (e) => {
   const formIsValid = form.checkValidity();
   if (formIsValid) {
     form.elements.submit.disabled = true;
-    window.location.href = "pdf.html";
     let person = {
       name: form.elements.fullname.value,
       visits: visitsCount,
@@ -80,12 +80,15 @@ form.addEventListener("submit", (e) => {
     };
     let stringyPerson = JSON.stringify(person);
     // Setting up a new user with the username in the local storage after submitting the form
+
     localStorage.setItem("user", stringyPerson);
 
     const myData = {
       full_name: form.elements.fullname.value,
       email: form.elements.email.value,
       company: form.elements.company.value,
+      country: form.elements.country.value,
+      job_title: form.elements.job.value,
       visits: 1,
     };
 
@@ -120,7 +123,6 @@ nextBtn.addEventListener("click", () => {
     let stringyPerson = JSON.stringify(updatedPerson);
     localStorage.setItem("user", stringyPerson);
 
-    window.location.href = "pdf.html";
     get(config.endpoint, handleData);
   } else {
     textSection.classList.add("fadeout");
@@ -149,4 +151,5 @@ function handleData(data) {
   const filterdUers = data.filter((dataUser) => dataUser.email === user.email);
   console.log(filterdUers);
   put(filterdUers[0]._id);
+  window.location.href = "pdf.html";
 }
